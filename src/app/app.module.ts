@@ -6,19 +6,17 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
 import { ThirdComponent } from './components/third/third.component';
-
+import {Routingmodule, routing} from './routing';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponent,
-    SecondComponent,
-    ThirdComponent
+   routing
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule, Routingmodule
   ],
   providers: [],
   bootstrap: [AppComponent]
