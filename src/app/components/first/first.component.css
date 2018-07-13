@@ -1,0 +1,64 @@
+.ukraine, .japan, .iceland, .czech
+{
+  width: 300px;
+  margin: 10px;
+  border: 1px solid black;
+}
+.ukraine div:first-child {
+  background-color: blue;
+  height: 100px;
+}
+.ukraine div:last-child {
+  background-color: yellow;
+  height: 100px;
+}
+
+.japan {
+  display: block;
+  height: 200px;
+  background: radial-gradient(circle, #bc002d 58px, #fff 60px);
+}
+
+.iceland   {
+  height: 200px;
+  background-color: blue;
+  position: relative;
+  display: block;
+}
+.vertical {
+  z-index: 3;
+  position: relative;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: red;
+  height: 30px;
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
+}
+.horizont {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  top:  0 ;
+  left:50px;
+  width: 50px;
+  background-color: white;
+  height: 200px;
+}
+.red{
+  z-index: 4;
+  background-color: red;
+  display: block;
+  position: absolute;
+  width: 30px;
+  left:60px;
+  height: 200px;
+}
+.czech
+{
+  display: block;
+  background-image:linear-gradient(35deg,#11457e 50%,transparent 50%),
+  linear-gradient(-35deg,transparent 50%,#11457e 50%),
+  linear-gradient(#fff 50%,#d7141a 50%);background-size:147px 100px,147px 100px,300px 200px;
+  background-position:0 0,0 100px,0 0;background-repeat:no-repeat,no-repeat,repeat;width:300px;height:200px}
