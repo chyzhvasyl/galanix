@@ -1,3 +1,28 @@
-<p>
-  second works!
-</p>
+<style>
+
+  @media screen and (  max-width: 900px)  and (min-width: 500px){
+    .col-sm-3{
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+</style>
+<div class="container">
+ <div class="row"><h5>Кількість фото: {{images.length}}</h5>
+   <br>
+
+ </div>
+  <div   align="right">{{date | date:'HH:mm dd-MM-yyyy'}}</div>
+  <div class="row">
+
+    <div class="col-sm-3" *ngFor="let image of images; let i = index; "  >
+
+      <img style="margin: 10px" class="img-fluid"   src="{{image.url}}">
+    </div>
+
+  </div>
+
+</div>
