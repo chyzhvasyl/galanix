@@ -1,28 +1,11 @@
-<style>
-
-  @media screen and (  max-width: 900px)  and (min-width: 500px){
-    .col-sm-3{
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 0 50%;
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  }
-</style>
-<div class="container">
+<div class="container" style="width: 80%">
  <div class="row"><h5>Кількість фото: {{images.length}}</h5>
-   <br>
-
  </div>
-  <div   align="right">{{date | date:'HH:mm dd-MM-yyyy'}}</div>
+  <div   align="right" style="">{{date | date:'HH:mm dd-MM-yyyy'}}</div>
   <div class="row">
-
-    <div class="col-sm-3" *ngFor="let image of images; let i = index; "  >
-
-      <img style="margin: 10px" class="img-fluid"   src="{{image.url}}">
+    <div  class="col-sm-3" *ngFor="let image of images; let i = index; "  >
+      <img   [ngClass]="{'red': (i%12 ==0 || i%12 ==4 || i%12==8 )||
+      ((i==2||i==4||i ==6||i==8 ||i==10)&& mobWidth <900)|| mobWidth < 500 }"  class="img-fluid"  src="{{image.url}}">
     </div>
-
   </div>
-
 </div>
