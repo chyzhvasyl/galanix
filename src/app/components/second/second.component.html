@@ -4,6 +4,7 @@
   <div   align="right" style="">{{date | date:'HH:mm dd-MM-yyyy'}}</div>
   <div class="row">
     <div  class="col-sm-3" *ngFor="let image of images; let i = index; "  >
+      <button  style="float: right" type="button" class="btn btn-link" (click)="delete (image)" >x  </button>
       <img   [ngClass]="{'red': (i%12 ==0 || i%12 ==4 || i%12==8 )||
       ((i==2||i==4||i ==6||i==8 ||i==10)&& mobWidth <900)|| mobWidth < 500 }"  class="img-fluid"  src="{{image.url}}">
     </div>

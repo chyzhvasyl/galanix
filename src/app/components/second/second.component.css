@@ -35,3 +35,16 @@ img:hover {
     max-width: 50%;
   }
 }
+[class*='close2-'] {
+  color: #777;
+  float: right;
+  font: 14px/100% arial, sans-serif;
+  position: absolute;
+  right: 5px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  top: 5px;
+}
+.close2-thik:after {
+  content: '✖'; /* UTF-8 symbol */
+}
