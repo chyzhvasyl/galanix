@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import {ImageService} from './components/second/shara/images';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
@@ -16,9 +16,9 @@ import {Routingmodule, routing} from './routing';
 
   ],
   imports: [
-    BrowserModule, Routingmodule
+    BrowserModule, Routingmodule, BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
