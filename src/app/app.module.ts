@@ -7,7 +7,7 @@ import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
 import { ThirdComponent } from './components/third/third.component';
 import {Routingmodule, routing} from './routing';
-
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import {Routingmodule, routing} from './routing';
 
   ],
   imports: [
-    BrowserModule, Routingmodule, BrowserAnimationsModule
+    BrowserModule, Routingmodule, BrowserAnimationsModule, HttpClientModule
   ],
   providers: [ImageService],
   bootstrap: [AppComponent]

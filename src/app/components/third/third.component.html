@@ -1,3 +1,46 @@
-<p>
-  third works!
-</p>
+<div class="container">
+  <br>
+  <h4>Get</h4>
+  <br>
+  <form>
+    <div class="form-row align-items-center">
+      <div class="col-auto">
+        <label class="sr-only"  >get name</label>
+        <input type="text"   class="form-control mb-2" id="inlineFormInput" placeholder="Ukraine" (keyup)="onNameKeyUp($event)">
+      </div>
+      <div class="col-auto">
+        <button type="button"  (click)="getProfile()"   class="btn btn-info">Відправити</button>
+        <button type="reset"  (click)="togle()"   class="btn btn-danger">Скинути</button>
+      </div>
+    </div>
+  </form>
+  <div>
+  </div>
+  <table class="table" *ngIf="found">
+    <thead>
+    <tr>
+      <th scope="col">№</th>
+      <th scope="col">Назва</th>
+      <th scope="col">Країна</th>
+      <th scope="col">Домен</th>
+      <th scope="col">Сайт</th>
+      <th scope="col">Зберегти:  {{arr.length }}</th>
+    </tr>
+    </thead>
+
+    <tbody *ngIf="toggle">
+    <tr *ngFor="let i of data; let k = index ;  " >
+      <th scope="row">{{k+1}}</th>
+      <td > {{i.name}}</td>
+      <td>{{i.country}}</td>
+      <td>{{i.domains}}</td>
+      <td > <a  href="{{ i.web_pages}}">{{ i.web_pages}}</a></td>
+      <td> <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" (click)="checkbox(i)" >
+        <label class="form-check-label" for="exampleCheck1"></label>
+      </div></td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>
