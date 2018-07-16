@@ -9,6 +9,7 @@ export class ThirdComponent implements OnInit {
 input = '';
 data = [];
 i = false;
+n = 0;
 arr = [];
 found: boolean;
 toggle = true;
@@ -34,7 +35,7 @@ if (data.length) {
   {
     this.i = !this.i;
     if (this.i === true) {
-    this.arr.push(i);
+    this.n += 1;
     }
   }
   ngOnInit() {
